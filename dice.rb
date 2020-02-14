@@ -5,6 +5,7 @@ class Dice
   
   def roll
     @die1 = 1 + rand(6)
+    
     @die2 = 1 + rand(6) 
   end
   
