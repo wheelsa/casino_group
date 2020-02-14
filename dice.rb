@@ -17,4 +17,3 @@ class Dice
   end 
  end
 
- Rolling_dice=
