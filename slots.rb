@@ -1,14 +1,13 @@
-require_relative 'card'
-require_relative 'deck'
-require_relative 'dice'
-require_relative 'hi_low'
-require_relative 'wallet'
+# require_relative 'card'
+# require_relative 'deck'
+# require_relative 'dice'
+# require_relative 'hi_low'
+# require_relative 'wallet'
 
 class Slots
   attr_accessor :wallet
 
   def initialize 
-    #@wallet = Slots.new(money)
     welcome_player
   end
 
@@ -40,7 +39,7 @@ end
 # If all three are the same they get $100
 #   This should prompt a JACKPOT! message
 def pull_lever
-
+  #generate three variables = a random object from @slots_entries
 end
 
 # Give them their wallet's new balance
@@ -58,8 +57,6 @@ end
 
 end
 
-@slot_entries = ["@","#","$","%","^","&","*","=","+","?","!","/","~"]
-slot_entries.count
+ @slot_entries = ["@","#","$","%","^","&","*","=","+","?","!","/","~"] #13 entries
 
-
-#Slots.new
+Slots.new
