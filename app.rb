@@ -7,7 +7,7 @@ require_relative 'deck'
 require_relative 'helpers'
 
 deck = Deck.new
-# deck.display_cards
+# deck.digitsplay_cards
 
 # dice=Dice.new
 # dice.roll
