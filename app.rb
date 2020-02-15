@@ -12,7 +12,8 @@ require_relative "dice"
 >>>>>>> 078f77c99978b66fd67bc4b411902375f145d704
 
 deck = Deck.new
-deck.display_cards
+# deck.display_cards
+
 dice=Dice.new
 dice.roll
 dice.show_dice
