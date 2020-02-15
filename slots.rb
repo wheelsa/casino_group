@@ -38,11 +38,29 @@ end
 # If 1 and 2 or 0 and 1 are they same they get $10
 # If all three are the same they get $100
 #   This should prompt a JACKPOT! message
-def pull_lever
-  #generate three variables = a random object from @slots_entries
-end
+  def pull_lever
+    slot_return = Array.new
 
-# Give them their wallet's new balance
+    3.times do
+      slot_return << @slot_entries.sample
+    end
+
+    puts slot_return.join(' ')
+    end
+
+    if slot_return[0] == slot_return[2]
+      #some code
+    elsif slot_return[0] == slot_return[1]
+      #some code
+    elsif slot_return[1] == slot_return[2]
+      #some code
+    elsif slot_return[0] == slot_return[1] == slot_return[2]
+      #jackpot code
+    else
+      #go to a code that asks if they want to play again
+  end
+
+#Give them their wallet's new balance
 
 
 # Ask if they would like to place a bet.
@@ -54,9 +72,8 @@ end
 
 
 
-
-end
-
  @slot_entries = ["@","#","$","%","^","&","*","=","+","?","!","/","~"] #13 entries
 
-Slots.new
+puts @slot_entries
+
+#Slots.new
