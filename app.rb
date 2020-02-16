@@ -5,6 +5,7 @@ require_relative 'hi_low'
 require_relative 'wallet'
 require_relative 'deck'
 require_relative 'helpers'
+require_relative 'User'
 
 #deck = Deck.new
 # deck.digitsplay_cards
@@ -12,4 +13,4 @@ require_relative 'helpers'
 # dice=Dice.new
 # dice.roll
 # dice.show_dice
-user = get_user_info()
+get_user_info
