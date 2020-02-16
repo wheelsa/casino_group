@@ -3,6 +3,9 @@ require_relative 'deck'
 require_relative 'dice'
 require_relative 'hi_low'
 require_relative 'wallet'
+require_relative 'User'
+require_relative 'helpers'
+
 
 class Slots
 
@@ -31,6 +34,7 @@ class Slots
   def pull_lever
     if (@wallet.quantity < 1)
       puts "insufficient funds. Wallet has $#{@wallet.quantity}"
+      main_menu
     else
       @wallet.remove(1)
     end
