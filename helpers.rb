@@ -1,10 +1,11 @@
 require_relative 'card'
 require_relative 'dice'
 require_relative 'hi_low'
-require_relative 'Wallet'
+require_relative 'wallet'
 require_relative 'deck'
 require_relative 'helpers'
-require_relative 'User'
+require_relative 'slots'
+
 
 def get_user_info
   puts "Welcome to Ruby Casino" 
@@ -12,16 +13,13 @@ def get_user_info
   name = gets.chomp()
   puts "How much money do you have?"
   money = gets.chomp.to_i()
-  puts "Greetings #{@name}, you have $#{money}."
-  @wallet = Wallet.new(money)
-  user = User.new(@name, @wallet)
+  puts "Greetings #{name}, you have $#{money}."
+  @wallet_purse = Wallet.new(money)
+  # user = User.new(name, @wallet)
   # return user 
   main_menu
 end
 
-  @wallet = Wallet.new(money)
-  @user = User.new(name, @wallet)
-  return user 
 def main_menu
   puts "We have lots of fun in store for you"
   puts "Press 1) to play a game of Hi Low"
@@ -35,8 +33,7 @@ def main_menu
     @hi_low_game = HiLow.new
     @hi_low_game.intro
   when @choice == 2
-    #show balance
-    hi_game_menu
+    @slots_game = Slots.new
   when @choice == 3
     #appclass
   when @choice == 0
@@ -45,9 +42,12 @@ def main_menu
     puts "That is an invalid choice, please choose a number from the menu".purp
   end 
 end
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 puts get_user_info
 =======
 get_user_info
 >>>>>>> c17a9d9d8079a4bf28aee8c94265c0ca0d24b8db
+=======
+>>>>>>> 0710be3079c3f4b6448644accc3279a15d113466

@@ -1,11 +1,10 @@
 require 'colorize'
 require_relative 'card'
 require_relative 'dice'
-require_relative 'hi_low'
-require_relative 'Wallet'
+require_relative 'wallet'
 require_relative 'deck'
 require_relative 'helpers'
-require_relative 'User' 
+
 class HiLow
   attr_accessor :cards
   def initialize
@@ -35,10 +34,12 @@ end
 def stage1
   puts "Please make your bet:".green.bold
   @bet = gets.to_i
-  #if @bet < wallet puts"You don't have enough money, please bet less or return to menu by pressing 0
-#elsesubtract @bet from class for money purse
+  if (@wallet.quantity < @bet)
+    "Sorry, you only have #{@wallet.quantity} "
+  else 
   "Thanks, we have your bet placed for #{@bet}.
   ".green
+  end
   puts "
   Here is your card:
   ".green
