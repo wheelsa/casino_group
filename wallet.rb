@@ -11,10 +11,6 @@ class Wallet
     @quantity = quantity
   end
   def remove(amount)
-    if (amount > @quantity)
-      puts "insufficient funds. Wallet has $#{@quantity}"
-      return 0
-    end
     @quanitity = @quantity - amount
     return amount
   end
@@ -27,3 +23,4 @@ class Wallet
     puts "Your balance is #{@quantity}!"
   end 
 end
+
