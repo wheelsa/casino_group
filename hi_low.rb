@@ -1,11 +1,15 @@
 require 'colorize'
 require_relative 'card'
+require_relative 'dice'
+require_relative 'hi_low'
+require_relative 'Wallet'
 require_relative 'deck'
+require_relative 'helpers'
+require_relative 'User' 
 class HiLow
   attr_accessor :cards
   def initialize
     @cards = cards
-    intro
   end
 def intro
 
@@ -114,7 +118,7 @@ def high_low_multiplier
       won_money
       else
       end
-  
+
     when (@wager == 2) && ($value_user < $value_dealer)
     puts "
     Congratulations, you won this hand!
@@ -182,17 +186,16 @@ def hi_game_menu
   when @choice == 1
     intro
   when @choice == 2
-    #show balance
+    @wallet.current_balance
     hi_game_menu
   when @choice == 3
-    #appclass
+    main_menu
   when @choice == 0
     exit
   else
     puts "That is an invalid choice, please choose a number from the menu".purp
   end 
 end
-
 
 def won_money
   puts "In fact, you won $#{'%.2f' % @bet}!

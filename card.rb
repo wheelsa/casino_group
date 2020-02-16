@@ -1,4 +1,12 @@
 require 'colorize'
+require_relative 'hi_low'
+require_relative 'card'
+require_relative 'dice'
+require_relative 'hi_low'
+require_relative 'wallet'
+require_relative 'deck'
+require_relative 'helpers'
+require_relative 'User'
 class Card
   # Getter and Setter methods for rank, suit and color
   attr_accessor :rank, :suit, :color, :i
