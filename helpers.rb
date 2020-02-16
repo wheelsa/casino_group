@@ -13,3 +13,5 @@ def get_user_info
   user = User.new(name, wallet)
   return user 
 end
+
+puts get_user_info
