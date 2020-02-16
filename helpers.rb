@@ -3,8 +3,8 @@ require_relative 'dice'
 require_relative 'hi_low'
 require_relative 'Wallet'
 require_relative 'deck'
-require_relative 'helpers'
-require_relative 'User'
+require_relative 'slots'
+
 
 def get_user_info
   puts "Welcome to Ruby Casino" 

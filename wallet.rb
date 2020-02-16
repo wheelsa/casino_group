@@ -3,6 +3,7 @@ require_relative 'dice'
 require_relative 'hi_low'
 require_relative 'deck'
 require_relative 'helpers'
+require_relative 'slots'
 
 
 class Wallet
@@ -11,7 +12,7 @@ class Wallet
     @quantity = quantity
   end
   def remove(amount)
-    @quanitity = @quantity - amount
+    @quantity = @quantity - amount
     return amount
   end
   
