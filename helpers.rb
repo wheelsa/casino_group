@@ -19,9 +19,6 @@ def get_user_info
   main_menu
 end
 
-  @wallet = Wallet.new(money)
-  @user = User.new(name, @wallet)
-  return user 
 def main_menu
   puts "We have lots of fun in store for you"
   puts "Press 1) to play a game of Hi Low"
