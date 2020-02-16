@@ -39,26 +39,26 @@ end
 # If all three are the same they get $100
 #   This should prompt a JACKPOT! message
   def pull_lever
-    slot_return = Array.new
 
     3.times do
-      slot_return << @slot_entries.sample
+      @slot_return << @slot_entries.sample
     end
 
-    puts slot_return.join(' ')
+    puts s@lot_return.join(' ')
     end
 
-    if slot_return[0] == slot_return[2]
+    if @slot_return[0] == @slot_return[2]
       #some code
-    elsif slot_return[0] == slot_return[1]
+    elsif @slot_return[0] == @slot_return[1]
       #some code
-    elsif slot_return[1] == slot_return[2]
+    elsif @slot_return[1] == @slot_return[2]
       #some code
-    elsif slot_return[0] == slot_return[1] == slot_return[2]
+    elsif @slot_return[0] == @slot_return[1] && @slot_return[1]== @slot_return[2]
       #jackpot code
     else
       #go to a code that asks if they want to play again
   end
+end
 
 #Give them their wallet's new balance
 
@@ -73,7 +73,6 @@ end
 
 
  @slot_entries = ["@","#","$","%","^","&","*","=","+","?","!","/","~"] #13 entries
+ @slot_return = Array.new
 
 puts @slot_entries
-
-#Slots.new
