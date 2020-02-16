@@ -1,10 +1,15 @@
 require_relative 'card'
+require_relative 'dice'
+require_relative 'hi_low'
+require_relative 'Wallet'
+require_relative 'deck'
+require_relative 'helpers'
+require_relative 'User'
 require 'colorize'
 @new_array = []
 class Deck
   # Getter and Setter methods for rank, suit and color
   attr_accessor :cards
- 
   # Gets called when you call the new method to create an instance
   # deck = Deck.new
   def initialize
@@ -49,9 +54,4 @@ class Deck
  end
 
 
-@cards_deal = Deck.new
-@cards_deal.deal_user(1)
-puts $value_user
-@cards_deal.deal_dealer(1)
-puts $value_dealer
 
