@@ -1,8 +1,8 @@
 require_relative 'card'
 require_relative 'dice'
 require_relative 'hi_low'
-require_relative 'Wallet'
-require_relative 'deck'
+require_relative 'wallet'
+require_relative 'slots'
 require_relative 'helpers'
 require 'colorize'
 @new_array = []

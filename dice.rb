@@ -1,3 +1,10 @@
+require_relative 'card'
+require_relative 'helpers'
+require_relative 'hi_low'
+require_relative 'wallet'
+require_relative 'deck'
+require_relative 'slots'
+
 class Dice
   def initialize
     roll
