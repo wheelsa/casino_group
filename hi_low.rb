@@ -5,6 +5,7 @@ class HiLow
   attr_accessor :cards
   def initialize
     @cards = cards
+    intro
   end
 def intro
 
@@ -199,5 +200,4 @@ def won_money
 end
 end 
 
-hi_low_game = HiLow.new
-hi_low_game.intro
+
