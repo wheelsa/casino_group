@@ -9,7 +9,9 @@ def get_user_info
   money = gets.chomp.to_i()
   puts "Greetings #{name}, you have $#{money}."
 
-  wallet = Wallet.new(money)
-  user = User.new(name, wallet)
+  @wallet = Wallet.new(money)
+  @user = User.new(name, @wallet)
   return user 
 end
+
+get_user_info
