@@ -19,6 +19,5 @@ class Card
     $value_dealer = @i
   end
  end
-# card_new = Card.new('10',"King")
-# p card_new
+
 
