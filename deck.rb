@@ -1,4 +1,5 @@
 require_relative 'card'
+require 'colorize'
 @new_array = []
 class Deck
   # Getter and Setter methods for rank, suit and color
