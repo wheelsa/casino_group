@@ -21,3 +21,4 @@ class Card
  end
 # card_new = Card.new('10',"King")
 # p card_new
+

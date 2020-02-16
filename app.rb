@@ -6,7 +6,7 @@ require_relative 'wallet'
 require_relative 'deck'
 require_relative 'helpers'
 
-deck = Deck.new
+#deck = Deck.new
 # deck.digitsplay_cards
 
 # dice=Dice.new

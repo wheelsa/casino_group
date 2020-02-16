@@ -5,7 +5,6 @@
 # require_relative 'wallet'
 
 class Slots
-  attr_accessor :wallet
 
   def initialize 
     welcome_player
@@ -39,6 +38,7 @@ end
 # If all three are the same they get $100
 #   This should prompt a JACKPOT! message
   def pull_lever
+    #remove(amount) 
 
     3.times do
       @slot_return << @slot_entries.sample
@@ -57,6 +57,7 @@ end
       #jackpot code
     else
       #go to a code that asks if they want to play again
+      #reset the @slot_return array to be empty
   end
 end
 
