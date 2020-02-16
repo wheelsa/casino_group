@@ -11,7 +11,7 @@ class Wallet
     @quantity = quantity
   end
   def remove(amount)
-    @quanitity = @quantity - amount
+    @quantity = @quantity - amount
     return amount
   end
   
