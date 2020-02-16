@@ -35,10 +35,13 @@ end
 def stage1
   puts "Please make your bet:".green.bold
   @bet = gets.to_i
-  #if @bet < wallet puts"You don't have enough money, please bet less or return to menu by pressing 0
-#elsesubtract @bet from class for money purse
+  # if @wallet.quantity
+  # if @bet > @wallet.quantity
+  #   "Sorry, you only have #{@quantity} "
+  # else 
   "Thanks, we have your bet placed for #{@bet}.
   ".green
+
   puts "
   Here is your card:
   ".green
