@@ -5,7 +5,7 @@ require_relative 'hi_low'
 require_relative 'wallet'
 require_relative 'deck'
 require_relative 'helpers'
-require_relative 'User'
+
 
 #deck = Deck.new
 # deck.digitsplay_cards

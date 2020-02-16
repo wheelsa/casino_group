@@ -4,7 +4,6 @@ require_relative 'hi_low'
 require_relative 'Wallet'
 require_relative 'deck'
 require_relative 'helpers'
-require_relative 'User'
 require 'colorize'
 @new_array = []
 class Deck
