@@ -1,4 +1,4 @@
-
+require 'colorize'
 class Card
   # Getter and Setter methods for rank, suit and color
   attr_accessor :rank, :suit, :color, :i
@@ -11,11 +11,11 @@ class Card
     @i = i
   end
   def output_user_card
-    puts "The #{@rank} of #{@suit}"
+    puts "The #{@rank} of #{@suit}".red.bold
     $value_user = @i
   end
   def output_dealer_card
-    puts "The #{@rank} of #{@suit}"
+    puts "The #{@rank} of #{@suit}".red.bold
     $value_dealer = @i
   end
  end
