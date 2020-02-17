@@ -5,16 +5,22 @@ require_relative 'Wallet'
 require_relative 'deck'
 require_relative 'slots'
 
-
 def get_user_info
   puts "Welcome to Ruby Casino" 
   puts "what's your name"
   name = gets.chomp()
   puts "How much money do you have?"
   @money = gets.chomp.to_i()
+<<<<<<< HEAD
+  puts "Greetings #{name}, you have $#{@money}."
+  $wallet = Wallet.new(@money)
+  puts $wallet.bankroll
+  # user = User.new(name, $wallet)
+=======
   puts "Greetings #{@name}, you have $#{$money}."
   wallet = Wallet.new(@money)
   user = User.new(@name, @wallet)
+>>>>>>> 25876bf10b67f7d9cfdb738ef5cd758901fed1a2
   # return user 
   main_menu
 end
