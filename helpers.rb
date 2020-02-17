@@ -18,8 +18,6 @@ def get_user_info
   puts "Greetings #{name}, you have $#{@money}."
   @@wallet = Wallet.new(@money)
   puts @@wallet.bankroll
-  # user = User.new(name, $wallet)
-  # return user 
   main_menu
 end
 
@@ -39,7 +37,10 @@ def main_menu
     #show balance
     hi_game_menu
   when @choice == 3
-    #appclass
+    @@wallet.current_balance
+    main_menu
+  when @choice == 4
+    main_menu
   when @choice == 0
     exit
   else
