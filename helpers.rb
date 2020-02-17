@@ -1,9 +1,8 @@
 require_relative 'card'
 require_relative 'dice'
 require_relative 'hi_low'
-require_relative 'wallet'
+require_relative 'Wallet'
 require_relative 'deck'
-require_relative 'helpers'
 require_relative 'slots'
 
 def get_user_info
@@ -12,10 +11,16 @@ def get_user_info
   name = gets.chomp()
   puts "How much money do you have?"
   @money = gets.chomp.to_i()
+<<<<<<< HEAD
   puts "Greetings #{name}, you have $#{@money}."
   $wallet = Wallet.new(@money)
   puts $wallet.bankroll
   # user = User.new(name, $wallet)
+=======
+  puts "Greetings #{@name}, you have $#{$money}."
+  wallet = Wallet.new(@money)
+  user = User.new(@name, @wallet)
+>>>>>>> 25876bf10b67f7d9cfdb738ef5cd758901fed1a2
   # return user 
   main_menu
 end
@@ -33,7 +38,8 @@ def main_menu
     @hi_low_game = HiLow.new
     @hi_low_game.intro
   when @choice == 2
-    @slots_game = Slots.new
+    #show balance
+    hi_game_menu
   when @choice == 3
     #appclass
   when @choice == 0
