@@ -36,8 +36,8 @@ def stage1
   puts "Please make your bet:".green.bold
   @bet = gets.to_i
 
-  if $wallet.bankroll < @bet
-    puts "Sorry, you only have #{$wallet.bankroll}, please provide a different bet"
+  if @@wallet.bankroll < @bet
+    puts "Sorry, you only have #{@@wallet.bankroll}, please provide a different bet"
     stage1
   else 
   "Thanks, we have your bet placed for #{@bet}.
@@ -82,7 +82,7 @@ def high_low_multiplier
   @cards_deal = Deck.new
   @cards_deal.deal_dealer(1)
   case 
-    when (@wager == 1)  && ($value_user > $value_dealer)
+    when (@wager == 1)  && ($value_user < $value_dealer)
     puts "
     Congratulations, you won this hand!
     ".blue
@@ -123,10 +123,11 @@ def high_low_multiplier
       else
       end
 
-    when (@wager == 2) && ($value_user < $value_dealer)
+    when (@wager == 2) && ($value_user > $value_dealer)
     puts "
     Congratulations, you won this hand!
-    ".blue
+    ".blue  
+    @@wallet.add(@bet)
       case 
       when $value_user == 12
       @bet = @bet * 1.1
@@ -169,15 +170,14 @@ def high_low_multiplier
     puts "
     This round was a push, you get to keep your $#{'%.2f' % @bet}.
     ".red
+    @@wallet.add(@bet)
 
     else 
       puts "
       The house wins, sorry friend. You lost $#{'%.2f' % @bet} :(. 
       ".red
-    
+      @@wallet.remove(@bet)
   end 
-   #need class to add money to wallet
-   #need class to state how much current balance is'
   hi_game_menu
 end 
 def hi_game_menu
@@ -190,20 +190,21 @@ def hi_game_menu
   when @choice == 1
     intro
   when @choice == 2
-    @wallet.current_balance
+    @@wallet.current_balance
     hi_game_menu
   when @choice == 3
     main_menu
   when @choice == 0
     exit
   else
-    puts "That is an invalid choice, please choose a number from the menu".purp
+    puts "That is an invalid choice, please choose a number from the menu"
   end 
 end
 
 def won_money
-  puts "In fact, you won $#{'%.2f' % @bet}!
+  puts "In fact, you won $#{'%.2f' % @bet} (including your original bet)!
   ".blue.bold
+  @@wallet.add(@bet)
 end
 end 
 

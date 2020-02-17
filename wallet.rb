@@ -16,7 +16,7 @@ class Wallet
 
   def remove(amount)
     if (amount > @bankroll)
-      puts "insufficient funds. Wallet has $#{@bankroll}"
+      puts "insufficient funds. Wallet has $#{'%.2f' % @bankroll}"
       return 0
     end
     @bankroll = @bankroll - amount
@@ -28,6 +28,6 @@ class Wallet
     return amount
   end
   def current_balance
-    puts "Your balance is #{@bankroll}!"
+    puts "Your balance is $#{'%.2f' % @bankroll}!"
   end 
 end
