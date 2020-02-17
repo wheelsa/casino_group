@@ -5,6 +5,7 @@ require_relative 'wallet'
 require_relative 'deck'
 require_relative 'helpers'
 
+
 class HiLow
   attr_accessor :cards
   def initialize
@@ -34,8 +35,10 @@ end
 def stage1
   puts "Please make your bet:".green.bold
   @bet = gets.to_i
-  if (@wallet.quantity < @bet)
-    "Sorry, you only have #{@wallet.quantity} "
+
+  if $wallet.bankroll < @bet
+    puts "Sorry, you only have #{$wallet.bankroll}, please provide a different bet"
+    stage1
   else 
   "Thanks, we have your bet placed for #{@bet}.
   ".green
