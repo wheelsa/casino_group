@@ -22,7 +22,8 @@ def get_user_info
 end
 
 def main_menu
-  puts "We have lots of fun in store for you"
+  puts "Welcome to the Casino Main Menu! We have lots of fun in store for you.
+  "
   puts "Press 1) to play a game of Hi Low"
   puts "Press 2) to play a game of Slots"
   puts "Press 3) to view your balance"
@@ -40,6 +41,10 @@ def main_menu
     @@wallet.current_balance
     main_menu
   when @choice == 4
+    puts "Please tell us what your new balance should be:"
+    @money = gets.chomp.to_i()
+    @@wallet = Wallet.new(@money)
+  puts "Your new balance is  $#{@@wallet.bankroll}."
     main_menu
   when @choice == 0
     exit
