@@ -11,6 +11,7 @@ class Wallet
   def initialize(quantity)
     @quantity = quantity
   end
+  
   def remove(amount)
     @quantity = @quantity - amount
     return amount

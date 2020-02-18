@@ -1,4 +1,3 @@
-require_relative 'card'
 require_relative 'dice'
 require_relative 'hi_low'
 require_relative 'wallet'
@@ -14,7 +13,7 @@ class Slots
   end
 
   def welcome_player
-    puts "~~~ Welcome to Ruby Slots #{@name} ~~~"
+    puts "~~~ Welcome to Ruby Slots ~~~"
     slots_menu
   end
 
