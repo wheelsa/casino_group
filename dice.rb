@@ -59,4 +59,4 @@ class Dice
     print "Sum of dice is ", @die1 + @die2, ".\n"
   end 
  end
-
+ 
