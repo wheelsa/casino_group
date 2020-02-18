@@ -34,8 +34,7 @@ def main_menu
     @hi_low_game = HiLow.new
     @hi_low_game.intro
   when @choice == 2
-    #show balance
-    hi_game_menu
+    play_slots
   when @choice == 3
     @@wallet.current_balance
     main_menu

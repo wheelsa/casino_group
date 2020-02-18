@@ -3,6 +3,7 @@ require_relative 'hi_low'
 require_relative 'wallet'
 require_relative 'helpers'
 require_relative 'deck'
+require_relative 'app'
 
 
 class Slots
@@ -30,7 +31,7 @@ class Slots
 
 
   def pull_lever
-    @wallet_purse.remove(1)
+    @@wallet.remove(1)
     @slot_entries = ["@","#","$","%","^","&","*","=","+","?","!","/","~"]
     @slot_return = Array.new
     3.times do
@@ -40,20 +41,20 @@ class Slots
 
     if @slot_return[0] == @slot_return[2]
       puts "Congratulations!! You won $5!!"
-      @wallet_purse.add(5)
+      @@wallet.add(5)
       slots_menu
     elsif @slot_return[0] == @slot_return[1]
       puts "Amazing!! You won $10!!"
-      @wallet_purse.add(10)
+      @@wallet.add(10)
       slots_menu
     elsif @slot_return[1] == @slot_return[2]
       puts "Amazing!! You won $10!!"
-      @wallet_purse.add(10)
+      @@wallet.add(10)
       slots_menu
     elsif @slot_return[0] == @slot_return[1] && @slot_return[1]== @slot_return[2]
       puts "~~~JACKPOT~~~JACKPOT~~~JACKPOT~~~JACKPOT~~~JACKPOT~~~JACKPOT~~~~"
       puts "~~ $100 ~~ $100 ~~ $100 ~~ $100 ~~ $100 ~~ $100 ~~ $100 ~~"
-      @wallet_purse.add(100)
+      @@wallet.add(100)
     else
       puts "Womp Womp. You  didn't win."
       puts "Would you like to play again?? Yes or no."
@@ -69,18 +70,11 @@ class Slots
       @slot_return.clear
   end
 end
-#@wallet.current_balance
-
-
-# Ask if they would like to place a bet.
-# If yes, what number will the dice roll next?
-#   Correct = +$5 Incorrect = -$5
 
 end
 
 
 
-
-
- 
-#  Slots.new
+def play_slots
+  Slots.new
+end
