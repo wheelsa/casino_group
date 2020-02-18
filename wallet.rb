@@ -5,24 +5,28 @@ require_relative 'deck'
 require_relative 'helpers'
 require_relative 'slots'
 
-
 class Wallet
-  attr_accessor :quantity 
-  def initialize(quantity)
-    @quantity = quantity
+  attr_accessor :bankroll 
+  def initialize(bankroll)
+    @bankroll = bankroll
   end
-  
+  def bankroll
+    @bankroll
+  end
   def remove(amount)
-    @quantity = @quantity - amount
+    if (amount > @bankroll)
+      puts "insufficient funds. Wallet has $#{'%.2f' % @bankroll}"
+      return 0
+    end
+    @bankroll = @bankroll - amount
     return amount
   end
-  
+
   def add(amount)
-    @quantity = @quantity + amount
+    @bankroll = @bankroll + amount
     return amount
   end
   def current_balance
-    puts "Your balance is #{@quantity}!"
+    puts "Your balance is $#{'%.2f' % @bankroll}!"
   end 
 end
-

@@ -1,7 +1,6 @@
 require_relative 'dice'
 require_relative 'hi_low'
 require_relative 'wallet'
-require_relative 'User'
 require_relative 'helpers'
 require_relative 'deck'
 
