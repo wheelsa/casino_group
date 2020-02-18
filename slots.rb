@@ -57,6 +57,7 @@ class Slots
       @@wallet.add(100)
     else
       puts "Womp Womp. You  didn't win."
+      #win_lose_game if this can work then take out the rest of this "else" and just run the method
       puts "Would you like to play again?? Yes or no."
       response = gets.strip.downcase
       if response == "yes"
