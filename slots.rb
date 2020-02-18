@@ -75,7 +75,4 @@ end
 end
 
 
-
-def play_slots
-  Slots.new
-end
+Slots.new
