@@ -6,6 +6,8 @@ require_relative 'deck'
 require_relative 'app'
 
 
+
+
 class Slots
 
   def initialize
@@ -74,5 +76,4 @@ end
 
 end
 
-
-Slots.new
+@play_slots = Slots.new

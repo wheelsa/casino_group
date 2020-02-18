@@ -1,7 +1,7 @@
 require_relative 'card'
 require_relative 'dice'
 require_relative 'hi_low'
-require_relative 'Wallet'
+require_relative 'wallet'
 require_relative 'deck'
 require_relative 'slots'
 
@@ -34,7 +34,6 @@ def main_menu
     @hi_low_game = HiLow.new
     @hi_low_game.intro
   when @choice == 2
-    @play_slots = Slots.new
     @play_slots
   when @choice == 3
     @@wallet.current_balance

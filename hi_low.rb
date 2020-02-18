@@ -1,4 +1,4 @@
-require 'colorize'
+
 require_relative 'card'
 require_relative 'dice'
 require_relative 'wallet'
